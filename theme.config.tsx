@@ -1,4 +1,4 @@
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import { DocsThemeConfig, Link } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
   logo: <div>ruckonic.dev</div>,
@@ -11,8 +11,9 @@ const config: DocsThemeConfig = {
       defaultTitle: 'ruckonic.dev',
     }
   },
-  docsRepositoryBase: 'https://github.com/ruckonic/algorithms',
-  logoLink: 'https://ruckonic.dev'
+  docsRepositoryBase: 'https://github.com/ruckonic/algorithms/tree/main',
+  logoLink: 'https://ruckonic.dev',
+
 }
 
 export default config
