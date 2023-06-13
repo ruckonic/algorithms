@@ -13,7 +13,9 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/ruckonic/algorithms/tree/main',
   logoLink: 'https://ruckonic.dev',
-
+  footer: {
+    text: 'MIT 2023 © ruckonic.dev',
+  }
 }
 
 export default config
