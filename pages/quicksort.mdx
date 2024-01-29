@@ -1,0 +1,36 @@
+# Quicksort
+
+Quicksort is an efficient sorting algorithm that employs the "divide and conquer" strategy. It selects a pivot in the array, rearranges elements so that those smaller than the pivot are on its left, and those larger are on its right. This process is applied recursively to the subsets generated on both sides of the pivot. While the pivot choice can impact performance, overall, Quicksort is widely adopted for its speed and efficiency in most cases.
+
+### Requirements
+
+- Elements must be comparable to determine their relative order.
+
+### Time Complexity
+
+- The average time complexity of the Quicksort algorithm is O(n log n), where nn is the size of the array. In the worst-case scenario, it could be O(n^2), but this situation is uncommon in practice. Quicksort is renowned for its efficiency and is widely used due to its fast average performance and straightforward implementation.
+
+### Implementation
+
+```javascript filename="quicksort.js"
+function quickSort(arr) {
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  const pivot = arr[Math.floor(arr.length / 2)];
+
+  const left = [];
+  const right = [];
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] < pivot) {
+      left.push(arr[i]);
+    } else {
+      right.push(arr[i]);
+    }
+  }
+
+  return [...quickSort(left), pivot, ...quickSort(right)];
+}
+```
